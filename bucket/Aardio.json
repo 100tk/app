@@ -1,0 +1,46 @@
+{
+    "##": "",
+    "version": "37.8.19",
+    "description": "aardio 编程语言，专注于桌面软件快速开发",
+    "homepage": "https://www.aardio.com/",
+    "license": "Freeware",
+    "notes": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://d.aardio.com/ide/aardio.7z",
+            "hash": "D5691691C87A43C4D692CE7279B1C193BF2BB68E91B4F13E30785C461093B2C6"
+        }
+    },
+    "shortcuts": [
+        ["aardio.exe","Aardio"]
+    ],
+    "persist": [
+        "code\\我的代码段",
+        "data\\aardio",
+        "config"
+    ],
+    "pre_install": "",
+    "installer": {
+        "script": ""
+    },
+    "post_install": [
+        "",
+        ""
+    ],
+    "uninstaller": {
+        "script":[
+            "if (Test-Path $env:LOCALAPPDATA\\aardio) {Remove-Item -Path $env:LOCALAPPDATA\\aardio -Recurse -Force}"
+        ]
+    },
+    "checkver": {
+        "url": "https://d.aardio.com/ide/check/",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://d.aardio.com/ide/aardio.7z"
+            }
+        }
+    }
+}
