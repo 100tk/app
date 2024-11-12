@@ -16,7 +16,7 @@
     "persist":[".vmr"],
     "post_install":[
         "if(Test-Path $env:USERPROFILE\\.vmr){Remove-Item -Recurse -Force $env:USERPROFILE\\.vmr}",
-        "New-Item -ItemType Junction -Path $env:USERPROFILE\\.vmr -Value $persist_dir"
+        "New-Item -ItemType Junction -Path $env:USERPROFILE\\.vmr -Value $persist_dir\\.vmr"
     ],
     "checkver": {
         "url": "https://github.com/gvcgo/version-manager/releases/download/v0.7.0/vmr_windows-amd64.zip"
