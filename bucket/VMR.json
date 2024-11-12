@@ -1,0 +1,30 @@
+{
+    "version": "0.6.9",
+    "description": "支持各种语言，无需插件，无需记忆命令，最好用的SDK版本管理器。",
+    "homepage": "https://github.com/gvcgo/version-manager",
+    "license": {
+        "identifier": "MIT License",
+        "url": "https://github.com/gvcgo/version-manager/blob/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gvcgo/version-manager/releases/download/v0.6.9/vmr_windows-amd64.zip",
+            "hash": "60445307874d4a23ac19fa097cef5fa2b4e4ec96b01d62396b309cc6fee2ccae"
+        }
+    },
+    "bin": "vmr.exe",
+    "pre_install": [
+        ""
+    ],
+    "pre_uninstall": [
+        ""
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gvcgo/version-manager/releases/download/v$version/vmr_windows-amd64.zip"
+            }
+        }
+    }
+}

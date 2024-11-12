@@ -41,19 +41,19 @@
 
 **architecture**: 如果应用程序不是32位的，可以使用架构来区分([示例](https://github.com/ScoopInstaller/Main/blob/master/bucket/7zip.json))。
 
-  - `32bit|64bit|arm64`: 包含特定架构的说明 (`bin`, `checkver`, `extract_dir`, `hash`, `installer`,  `pre_install`, `post_install`, `shortcuts`, `uninstaller`, `url`, and `msi` [`msi` 已弃用])。
+  - `32bit|64bit|arm64`: 包含特定架构的说明 (`bin`, `checkver`, `extract_dir`, `hash`, `installer`,  `pre_install`, `post_install`, `shortcuts`, `uninstaller`, `url`)。
 
 **autoupdate**: 定义如何自动更新清单。
 
-**bin**: 要添加到用户路径中的程序（可执行文件或脚本）。还可以创建一个别名，使用不同的名称调用实际的可执行文件，并（可选）传递参数给可执行文件。  
-    例如，使用 `[ "program.exe", "alias", "--arguments" ]`。  
-    参见 [busybox](https://github.com/ScoopInstaller/Main/blob/master/bucket/busybox.json) 示例。  
+**bin**: 要添加到用户路径中的程序（可执行文件或脚本）。还可以创建一个别名，使用不同的名称调用实际的可执行文件，并（可选）传递参数给可执行文件。
+    例如，使用 `[ "program.exe", "alias", "--arguments" ]`。
+    参见 [busybox](https://github.com/ScoopInstaller/Main/blob/master/bucket/busybox.json) 示例。
     但是，如果只声明一个这样的别名，必须确保它被包含在一个外部数组中，例如：`"bin": [ [ "program.exe", "alias" ] ]`。否则它将被视为单独的别名。
 
-**checkver**: 应用程序维护者和开发者可以使用 [bin/checkver](https://github.com/lukesampson/scoop/blob/master/bin/checkver.ps1) 工具检查应用程序的新版本。  
-清单中的 `checkver` 属性是一个正则表达式，可用于从应用程序主页匹配当前稳定版本。  
-例如，参见 [go](https://github.com/ScoopInstaller/Main/blob/master/bucket/go.json) 清单。  
-如果主页没有可靠的当前版本指示，还可以指定一个不同的URL进行检查。  
+**checkver**: 应用程序维护者和开发者可以使用 [bin/checkver](https://github.com/lukesampson/scoop/blob/master/bin/checkver.ps1) 工具检查应用程序的新版本。
+清单中的 `checkver` 属性是一个正则表达式，可用于从应用程序主页匹配当前稳定版本。
+例如，参见 [go](https://github.com/ScoopInstaller/Main/blob/master/bucket/go.json) 清单。
+如果主页没有可靠的当前版本指示，还可以指定一个不同的URL进行检查。
 例如，参见 [ruby](https://github.com/ScoopInstaller/Main/blob/master/bucket/ruby.json) 清单。
 
 
@@ -104,10 +104,10 @@
   2. 快捷方式名称（支持子目录：`<AppsSubDir>\\<AppShortcut>` 例如 [sysinternals](https://github.com/lukesampson/scoop-extras/blob/master/bucket/sysinternals.json)） [必需]
   3. 启动参数 [可选]
   4. 图标文件路径 [可选]
-  
+
 **depends**: 应用程序运行依赖，将自动安装。
 
-**suggest**: 作为 `depends` 的替代方案。显示建议安装的可选应用程序的消息，这些应用程序提供补充功能。  
+**suggest**: 作为 `depends` 的替代方案。显示建议安装的可选应用程序的消息，这些应用程序提供补充功能。
   参见 [ant](https://github.com/ScoopInstaller/Main/blob/master/bucket/ant.json) 示例。
   - `["Feature Name"] = [ "app1", "app2"... ]`<br>例如，`"JDK": [ "extras/oraclejdk", "openjdk" ]`<br>
   如果任何建议的特征应用程序已安装，该特征将被视为“满足”，用户不会看到任何建议。
@@ -120,8 +120,6 @@
 
 ### 已弃用的属性
 
-- `_comment`: 一个一行字符串或字符串数组，包含注释。使用 `##` 代替。
-- `msi` *(已弃用)*: 运行MSI安装程序的设置<br>
 **此属性已弃用，未来版本的Scoop将移除支持。**- *新方法是将 .msi 文件视为 .zip 文件，从中提取文件而不运行完整安装。只需不在清单中包含此 `msi` 属性即可使用新方法。*
   - `code` *必需*: MSI安装程序的产品代码GUID
   - `silent`: 通常应为 `true` 以尝试无弹出窗口和UAC提示安装

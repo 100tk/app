@@ -1,0 +1,48 @@
+{
+    "##": "",
+    "version": "1.2.10",
+    "description": "Eagle 素材管理从未如此简单。",
+    "homepage": "https://eagle.cool/",
+    "license": "Freeware",
+    "notes": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://r2-app.eagle.cool/releases/Eagle-4.0-x64-build5.exe",
+            "hash": ""
+        }
+    },
+    "shortcuts": [
+        ["wolai.exe","我来笔记"]
+    ],
+    "pre_install": "",
+    "installer": {
+        "script":[
+            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+        ]
+    },
+    "post_install": [
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
+    ],
+    "uninstaller": {
+        "script":[
+            "if (Test-Path $env:APPDATA\\wolai) {Remove-Item -Path $env:APPDATA\\wolai -Recurse -Force}",
+            "if (Test-Path $env:LOCALAPPDATA\\wolai) {Remove-Item -Path $env:LOCALAPPDATA\\wolai -Recurse -Force}"
+        ]
+    },
+    "persist": ["data"],
+    "checkver": {
+        "url": "",
+        "regex": ""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": ""
+            }
+        },
+        "hash": {
+            "url": "",
+            "regex": ""
+        }
+    }
+}

@@ -2,7 +2,7 @@
     "##": "",
     "version": "37.8.19",
     "description": "aardio 编程语言，专注于桌面软件快速开发",
-    "homepage": "https://www.aardio.com/",
+    "homepage": "https://www.aardio.com",
     "license": "Freeware",
     "notes": "",
     "architecture": {
@@ -29,7 +29,8 @@
     ],
     "uninstaller": {
         "script":[
-            "if (Test-Path $env:LOCALAPPDATA\\aardio) {Remove-Item -Path $env:LOCALAPPDATA\\aardio -Recurse -Force}"
+            "if (Test-Path $env:APPDATA\\aardio) {Remove-Item -Recurse -Force $env:APPDATA\\aardio }",
+            "if (Test-Path $env:LOCALAPPDATA\\aardio) {Remove-Item -Recurse -Force $env:LOCALAPPDATA\\aardio }"
         ]
     },
     "checkver": {

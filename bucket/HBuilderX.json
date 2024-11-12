@@ -1,0 +1,45 @@
+{
+    "##": "",
+    "version": "4.29",
+    "description": "HBuilderX Uniapp开发工具",
+    "homepage": "https://www.dcloud.io/hbuilderx.html",
+    "license": "Freeware",
+    "notes": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://qiniu-ecdn.dcloud.net.cn/download/HBuilderX.4.29.2024093009.zip",
+            "hash": ""
+        }
+    },
+    "shortcuts": [
+        ["hbuilderx.exe","HBuilderX"]
+    ],
+    "persist": [
+        "data"
+    ],
+    "pre_install": "",
+    "installer": {
+        "script": ""
+    },
+    "post_install": [
+        "",
+        ""
+    ],
+    "uninstaller": {
+        "script":[
+            "if (Test-Path $env:APPDATA\\'HBuilder X') {Remove-Item -Recurse -Force $env:APPDATA\\'HBuilder X' }",
+            "if (Test-Path $env:LOCALAPPDATA\\'HBuilder X') {Remove-Item -Recurse -Force $env:LOCALAPPDATA\\'HBuilder X'}"
+        ]
+    },
+    "checkver": {
+        "url": "https://qiniu-ecdn.dcloud.net.cn/download/HBuilderX.4.29.2024093009.zip",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://qiniu-ecdn.dcloud.net.cn/download/HBuilderX.4.29.2024093009.zip"
+            }
+        }
+    }
+}

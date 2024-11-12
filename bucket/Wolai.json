@@ -1,0 +1,48 @@
+{
+    "##": "",
+    "version": "1.2.10",
+    "description": "我来笔记，让协作更好地发生。",
+    "homepage": "https://www.wolai.com",
+    "license": "Freeware",
+    "notes": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.wostatic.cn/dist/installers/wolai%20Setup%201.2.10.exe",
+            "hash": "400F9196BAB7019B1550CDEF3D7971A348D5A23F8C60747725DFEEB45EEC8964"
+        }
+    },
+    "shortcuts": [
+        ["wolai.exe","我来笔记"]
+    ],
+    "pre_install": "",
+    "installer": {
+        "script":[
+            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+        ]
+    },
+    "post_install": [
+        "Remove-Item -Recurse -Force \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" "
+    ],
+    "uninstaller": {
+        "script":[
+            "if (Test-Path $env:APPDATA\\wolai) {Remove-Item -Recurse -Force $env:APPDATA\\wolai }",
+            "if (Test-Path $env:LOCALAPPDATA\\wolai) {Remove-Item -Recurse -Force $env:LOCALAPPDATA\\wolai }"
+        ]
+    },
+    "persist": ["data"],
+    "checkver": {
+        "url": "",
+        "regex": ""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": ""
+            }
+        },
+        "hash": {
+            "url": "",
+            "regex": ""
+        }
+    }
+}
