@@ -1,25 +1,26 @@
 {
-    "version": "0.6.9",
+    "version": "0.7.0",
     "description": "支持各种语言，无需插件，无需记忆命令，最好用的SDK版本管理器。",
-    "homepage": "https://github.com/gvcgo/version-manager",
+    "homepage": "https://vdocs.vmr.us.kg",
     "license": {
         "identifier": "MIT License",
         "url": "https://github.com/gvcgo/version-manager/blob/main/LICENSE"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/gvcgo/version-manager/releases/download/v0.6.9/vmr_windows-amd64.zip",
-            "hash": "60445307874d4a23ac19fa097cef5fa2b4e4ec96b01d62396b309cc6fee2ccae"
+            "url":"https://github.com/gvcgo/version-manager/releases/download/v0.7.0/vmr_windows-amd64.zip",
+            "hash": "725195D242D53A6A4D3704D43BC90364809BA6693A8ECA33B998EE57F05D0BD8"
         }
     },
     "bin": "vmr.exe",
-    "pre_install": [
-        ""
+    "persist":[".vmr"],
+    "post_install":[
+        "if(Test-Path $env:USERPROFILE\\.vmr){Remove-Item -Recurse -Force $env:USERPROFILE\\.vmr}",
+        "New-Item -ItemType Junction -Path $env:USERPROFILE\\.vmr -Value $persist_dir"
     ],
-    "pre_uninstall": [
-        ""
-    ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/gvcgo/version-manager/releases/download/v0.7.0/vmr_windows-amd64.zip"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
