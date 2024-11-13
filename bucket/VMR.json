@@ -15,9 +15,12 @@
     "bin": "vmr.exe",
     "persist":[".vmr"],
     "post_install":[
-        "if(Test-Path $env:USERPROFILE\\.vmr){Remove-Item -Recurse -Force $env:USERPROFILE\\.vmr}",
-        "New-Item -ItemType Junction -Path $env:USERPROFILE\\.vmr -Value $persist_dir\\.vmr > $null"
+        "if(Test-Path $home\\.vmr){Remove-Item -Recurse -Force $home\\.vmr}",
+        "New-Item -ItemType Junction -Path $home\\.vmr -Value $persist_dir\\.vmr > $null"
     ],
+    "uninstaller": {
+        "script":[""]
+    },
     "checkver": {
         "url": "https://github.com/gvcgo/version-manager/releases/download/v0.7.0/vmr_windows-amd64.zip"
     },
