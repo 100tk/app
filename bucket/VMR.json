@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url":"https://github.com/gvcgo/version-manager/releases/download/v0.7.0/vmr_windows-amd64.zip",
-            "hash": "725195D242D53A6A4D3704D43BC90364809BA6693A8ECA33B998EE57F05D0BD8"
+            "hash": "AC23666B70B3DF1EBB09DB3F547A975884C63C4E1DDD85CC5A6A37AB3B2B36D3"
         }
     },
     "bin": "vmr.exe",
