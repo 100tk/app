@@ -12,7 +12,7 @@
         }
     },
     "shortcuts": [
-        ["DownKyi.exe","DownKyi"]
+        ["DownKyi.exe","app\\DownKyi"]
     ],
     "persist": ["config"],
     "checkver": {

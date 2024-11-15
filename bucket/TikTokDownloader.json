@@ -13,7 +13,7 @@
     },
     "bin":"main.exe",
     "shortcuts": [
-        ["main.exe","抖音采集工具"]
+        ["main.exe","app\\抖音采集工具"]
     ],
     "checkver": {
         "url": "https://github.com/JoeanAmier/TikTokDownloader/releases/download/5.4/TikTokDownloader_V5.4_WIN.zip",

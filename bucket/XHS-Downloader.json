@@ -13,7 +13,7 @@
     },
     "bin":"main.exe",
     "shortcuts": [
-        ["main.exe","小红书链接提取"]
+        ["main.exe","app\\小红书链接提取"]
     ],
     "checkver": {
         "url": "https://github.com/JoeanAmier/XHS-Downloader/releases/download/2.3/XHS-Downloader_V2.3_Windows_X64.zip",

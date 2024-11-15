@@ -16,7 +16,8 @@
     "persist":[".vmr"],
     "post_install":[
         "if(Test-Path $home\\.vmr){Remove-Item -Recurse -Force $home\\.vmr}",
-        "New-Item -ItemType Junction -Path $home\\.vmr -Value $persist_dir\\.vmr > $null"
+        "New-Item -ItemType Junction -Path $home\\.vmr -Value $persist_dir\\.vmr > $null",
+        "New-Item -ItemType File -Path $persist_dir\\.vmr -Name \"conf.toml\" -Value \"SDKIntallationDir='D:\\APP\\Scoop\\persist\\vmr'\" > $null"
     ],
     "uninstaller": {
         "script":[""]
