@@ -14,10 +14,7 @@
     "shortcuts": [
         ["DownKyi.exe","DownKyi"]
     ],
-    "persist": [
-        "config",
-        ""
-    ],
+    "persist": ["config"],
     "checkver": {
         "url": "https://github.com/leiurayer/downkyi/releases/download/v1.6.1/DownKyi-1.6.1.zip",
         "regex": ""
