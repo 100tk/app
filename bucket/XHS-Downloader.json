@@ -1,0 +1,29 @@
+{
+    "##": "This file is a template. Fill the blanks and add or remove fields as necessary.",
+    "version": "2.3",
+    "description": "小红书链接提取/作品采集工具",
+    "homepage": "https://github.com/JoeanAmier/XHS-Downloader",
+    "license": "Freeware",
+    "notes": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/JoeanAmier/XHS-Downloader/releases/download/2.3/XHS-Downloader_V2.3_Windows_X64.zip",
+            "hash": "E84D75C3BC98D04D5A153CBA2CFE9CC85B6D208F3CA1FAC47044A7FD6DAD9290"
+        }
+    },
+    "bin":"main.exe",
+    "shortcuts": [
+        ["main.exe","小红书链接提取"]
+    ],
+    "checkver": {
+        "url": "https://github.com/JoeanAmier/XHS-Downloader/releases/download/2.3/XHS-Downloader_V2.3_Windows_X64.zip",
+        "regex": ""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/JoeanAmier/XHS-Downloader/releases/download/2.3/XHS-Downloader_V2.3_Windows_X64.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "##": "This file is a template. Fill the blanks and add or remove fields as necessary.",
+    "version": "5.4",
+    "description": "抖音主页/视频/图集/收藏/直播/原声/合集/评论/账号/搜索/热榜数据采集工具",
+    "homepage": "https://github.com/JoeanAmier/TikTokDownloader",
+    "license": "Freeware",
+    "notes": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/JoeanAmier/TikTokDownloader/releases/download/5.4/TikTokDownloader_V5.4_WIN.zip",
+            "hash": "1FB96EA7F71598BEE92803696838F5C7434AD8DD8CDFB9FF8BB4977118E020BA"
+        }
+    },
+    "bin":"main.exe",
+    "shortcuts": [
+        ["main.exe","抖音采集工具"]
+    ],
+    "checkver": {
+        "url": "https://github.com/JoeanAmier/TikTokDownloader/releases/download/5.4/TikTokDownloader_V5.4_WIN.zip",
+        "regex": ""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/JoeanAmier/TikTokDownloader/releases/download/5.4/TikTokDownloader_V5.4_WIN.zip"
+            }
+        }
+    }
+}

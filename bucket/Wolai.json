@@ -31,18 +31,14 @@
     },
     "persist": ["data"],
     "checkver": {
-        "url": "",
+        "url": "https://cdn.wostatic.cn/dist/installers/wolai%20Setup%201.2.10.exe",
         "regex": ""
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": ""
+                "url": "https://cdn.wostatic.cn/dist/installers/wolai%20Setup%201.2.10.exe"
             }
-        },
-        "hash": {
-            "url": "",
-            "regex": ""
         }
     }
 }
