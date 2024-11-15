@@ -1,0 +1,32 @@
+{
+    "##": "This file is a template. Fill the blanks and add or remove fields as necessary.",
+    "version": "1.0.13",
+    "description": "基于哔哩下载姬Windows版和AvaloniaUI制作的跨平台版本(支持Windows、linux、macOS)。",
+    "homepage": "https://github.com/yaobiao131/downkyicore",
+    "license": "Freeware",
+    "notes": "默认下载路径,软件运行目录下的Media文件夹",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/yaobiao131/downkyicore/releases/download/v1.0.13/DownKyi-1.0.13-1.win-x64.zip",
+            "hash": "ED9CA150D8F442CDE04DAEAB3F1CBFB4E63FAD808F7D308DFF38C367FA6100CF"
+        }
+    },
+    "shortcuts": [
+        ["DownKyi.exe","DownKyiCore"]
+    ],
+    "persist": [
+        "config",
+        ""
+    ],
+    "checkver": {
+        "url": "https://github.com/yaobiao131/downkyicore/releases/download/v1.0.13/DownKyi-1.0.13-1.win-x64.zip",
+        "regex": ""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/yaobiao131/downkyicore/releases/download/v1.0.13/DownKyi-1.0.13-1.win-x64.zip"
+            }
+        }
+    }
+}

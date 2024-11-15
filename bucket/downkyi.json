@@ -1,0 +1,32 @@
+{
+    "##": "This file is a template. Fill the blanks and add or remove fields as necessary.",
+    "version": "1.6.1",
+    "description": "哔哩下载姬（DownKyi）是一个简单易用的哔哩哔哩视频下载工具，具有简洁的界面，流畅的操作逻辑。",
+    "homepage": "https://github.com/leiurayer/downkyi",
+    "license": "Freeware",
+    "notes": "Aria下载失败：检查aria2c.exe是否可以正常工作和是否允许通过防火墙；或者尝试切换端口号。",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/leiurayer/downkyi/releases/download/v1.6.1/DownKyi-1.6.1.zip",
+            "hash": "D809C230C9DD9AB18A7CBAFC413DB2D93ECA25E45C4DF5FA6AAAD3F253015986"
+        }
+    },
+    "shortcuts": [
+        ["DownKyi.exe","DownKyi"]
+    ],
+    "persist": [
+        "config",
+        ""
+    ],
+    "checkver": {
+        "url": "https://github.com/leiurayer/downkyi/releases/download/v1.6.1/DownKyi-1.6.1.zip",
+        "regex": ""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/leiurayer/downkyi/releases/download/v1.6.1/DownKyi-1.6.1.zip"
+            }
+        }
+    }
+}
