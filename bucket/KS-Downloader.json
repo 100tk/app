@@ -1,0 +1,29 @@
+{
+    "##": "This file is a template. Fill the blanks and add or remove fields as necessary.",
+    "version": "1.2",
+    "description": "快手作品下载工具：完全免费开源，基于 HTTPX 模块实现，下载快手无水印视频、图片文件！",
+    "homepage": "https://github.com/JoeanAmier/KS-Downloader",
+    "license": "Freeware",
+    "notes": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/JoeanAmier/KS-Downloader/releases/download/1.2/KS-Downloader_V1.2_Windows_X64.zip",
+            "hash": "1FB96EA7F71598BEE92803696838F5C7434AD8DD8CDFB9FF8BB4977118E020BA"
+        }
+    },
+    "bin":"main.exe",
+    "shortcuts": [
+        ["main.exe","app\\抖音采集工具"]
+    ],
+    "checkver": {
+        "url": "https://github.com/JoeanAmier/KS-Downloader/releases/download/1.2/KS-Downloader_V1.2_Windows_X64.zip",
+        "regex": ""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/JoeanAmier/KS-Downloader/releases/download/1.2/KS-Downloader_V1.2_Windows_X64.zip"
+            }
+        }
+    }
+}

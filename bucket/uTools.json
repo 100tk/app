@@ -1,0 +1,35 @@
+{
+    "##": "检测版本思路，从更新日志中用正则匹配版本号，但缺少hash值。",
+    "version": "5.2.1",
+    "description": "新一代效率工具平台",
+    "homepage": "https://www.u.tools/",
+    "license": "Freeware",
+    "notes": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://open.u-tools.cn/download/uTools-5.2.1.exe#/dl.7z",
+            "hash": "9B4D68B62CE22E1A962F801D4BE3554D62ABE08A20947D548B55FE6C05F61423",
+            "installer": {
+                "script":"Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+            }
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse",
+    "shortcuts": [
+        ["uTools.exe","uTools"]
+    ],
+    "persist": [
+        "uTools"
+    ],
+    "checkver": {
+        "url": "https://www.u.tools/docs/guide/changelog.html",
+        "regex": "uTools\\s([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://open.u-tools.cn/download/uTools-$version.exe#/dl.7z"
+            }
+        }
+    }
+}
